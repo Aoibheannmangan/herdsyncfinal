@@ -1,15 +1,25 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
 
+// HomeScreen with navigation to other screens
 export default function HomeScreen() {
+  const navigation = useNavigation<NavigationProp<any>>();
 
-    const handleAnimalPress = () => {
+  // Navigate to Animal screen
+  const handleAnimalPress = () => {
+    navigation.navigate('Animal');
+  };
 
-    }
+  // Navigate to ToDo screen
+  const handleToDoPress = () => {
+    navigation.navigate('ToDo');
+  };
 
-    const handleToDoPress = () => {}
-
-    const handleLandPress = () => {}
+  // Navigate to Land screen
+  const handleLandPress = () => {
+    navigation.navigate('Land');
+  };
 
 
   return (
